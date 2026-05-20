@@ -52,11 +52,8 @@ using (var scope = app.Services.CreateScope())
 }
 
 // --- 6. Middleware ---
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseAuthentication();
 app.UseAuthorization();
